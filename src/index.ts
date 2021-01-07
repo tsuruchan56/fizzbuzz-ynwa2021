@@ -4,6 +4,5 @@ export const main = () => {
   for( num = 1; num <= 100; num++){
     console.log(num);
   }
-  return num;
 } 
 main();

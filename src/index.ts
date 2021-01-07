@@ -1,5 +1,9 @@
 export const main = () => {
-    for (let i = 1; i <= 100; i++) {
-        console.log(i);
-      };
-}
+
+  let num: number;
+  for( num = 1; num <= 100; num++){
+    console.log(num);
+  }
+  return num;
+} 
+main();

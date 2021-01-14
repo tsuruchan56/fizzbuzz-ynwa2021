@@ -19,9 +19,8 @@ export const chengeFizzBuzz = (number: number): string => {
 
 export const resultFizzBuzz = ():string => {
 
-  const addcomma = outputFizzBuzz()
-  return addcomma.join(',');
-
+  return  outputFizzBuzz().join(',')
+ 
 }
 
 console.log(resultFizzBuzz())

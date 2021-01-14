@@ -1,33 +1,35 @@
 "use strict";
 exports.__esModule = true;
-exports.lastElementSlice = exports.tofizzbuzz = exports.printOneToHundred = void 0;
-var printOneToHundred = function () {
-    var str = '';
-    for (var i = 1; i <= 100; i++) {
-        str += exports.tofizzbuzz(i) + ",";
-    }
-    return (exports.lastElementSlice(str));
+exports.addComma = exports.chengeFizzBuzz = exports.refineString = exports.printFizzBuzz = void 0;
+var printFizzBuzz = function () {
+    var numbers1_100 = Array.from(new Array(100).keys()).map(function (i) { return i + 1; });
+    var fizzbuzz = exports.refineString(numbers1_100);
+    return fizzbuzz;
 };
-exports.printOneToHundred = printOneToHundred;
-var tofizzbuzz = function (number) {
-    var result;
+exports.printFizzBuzz = printFizzBuzz;
+var refineString = function (number) {
+    var newarray = number.map(function (x) { return exports.chengeFizzBuzz(x); });
+    var fizzbuzzString = exports.addComma(newarray);
+    return fizzbuzzString;
+};
+exports.refineString = refineString;
+var chengeFizzBuzz = function (number) {
     if (number % 15 == 0) {
-        result = 'Fizz Buzz';
+        return 'Fizz Buzz';
     }
     else if (number % 5 == 0) {
-        result = 'Buzz';
+        return 'Buzz';
     }
     else if (number % 3 == 0) {
-        result = 'Fizz';
+        return 'Fizz';
     }
     else {
-        result = number.toString();
+        return number.toString();
     }
-    return result;
 };
-exports.tofizzbuzz = tofizzbuzz;
-var lastElementSlice = function (cut) {
-    return cut.slice(0, -1);
+exports.chengeFizzBuzz = chengeFizzBuzz;
+var addComma = function (comma) {
+    return comma.join(",");
 };
-exports.lastElementSlice = lastElementSlice;
-console.log(exports.printOneToHundred());
+exports.addComma = addComma;
+console.log(exports.printFizzBuzz());

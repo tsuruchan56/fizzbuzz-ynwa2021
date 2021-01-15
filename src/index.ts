@@ -1,14 +1,14 @@
-export const outputFizzBuzz = ():Array< number | string > => {
+export const output = ():Array< string > => {
 
   const array = [];
   for(let i = 1; i <= 100; i++){
-      array.push(chengeFizzBuzz(i))
+      array.push(convert(i))
   }
   return array;
 
 }
 
-export const chengeFizzBuzz = (number: number): string => {
+export const convert = (number: number): string => {
 
   if(number % 15 == 0 ) return 'Fizz Buzz';
   if(number % 5 == 0 ) return 'Buzz';
@@ -17,10 +17,10 @@ export const chengeFizzBuzz = (number: number): string => {
 
 }
 
-export const resultFizzBuzz = ():string => {
+export const insertcomma = ():string => {
 
-  return  outputFizzBuzz().join(',')
+  return  output().join(',')
  
 }
 
-console.log(resultFizzBuzz())
+console.log(insertcomma())

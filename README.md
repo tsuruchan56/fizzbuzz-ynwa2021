@@ -22,11 +22,7 @@ yarn ではなく npm でも問題なし
 
 ### 環境設定 
 ```shell
-# typescript + node.js install
 npm install 
-
-# jest install
-npm i jest @types/jest ts-jest -D 
 ```
 
 ### 処理実行方法

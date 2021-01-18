@@ -1,33 +1,26 @@
 "use strict";
-exports.__esModule = true;
-exports.lastElementSlice = exports.tofizzbuzz = exports.printOneToHundred = void 0;
-var printOneToHundred = function () {
-    var str = '';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.insertComma = exports.convertFizzBuzzRules = exports.outputOneToHundred = void 0;
+var outputOneToHundred = function () {
+    var array = [];
     for (var i = 1; i <= 100; i++) {
-        str += exports.tofizzbuzz(i) + ",";
+        array.push(exports.convertFizzBuzzRules(i));
     }
-    return (exports.lastElementSlice(str));
+    return array;
 };
-exports.printOneToHundred = printOneToHundred;
-var tofizzbuzz = function (number) {
-    var result;
-    if (number % 15 == 0) {
-        result = 'Fizz Buzz';
-    }
-    else if (number % 5 == 0) {
-        result = 'Buzz';
-    }
-    else if (number % 3 == 0) {
-        result = 'Fizz';
-    }
-    else {
-        result = number.toString();
-    }
-    return result;
+exports.outputOneToHundred = outputOneToHundred;
+var convertFizzBuzzRules = function (number) {
+    if (number % 15 == 0)
+        return 'Fizz Buzz';
+    if (number % 5 == 0)
+        return 'Buzz';
+    if (number % 3 == 0)
+        return 'Fizz';
+    return number.toString();
 };
-exports.tofizzbuzz = tofizzbuzz;
-var lastElementSlice = function (cut) {
-    return cut.slice(0, -1);
+exports.convertFizzBuzzRules = convertFizzBuzzRules;
+var insertComma = function () {
+    return exports.outputOneToHundred().join(',');
 };
-exports.lastElementSlice = lastElementSlice;
-console.log(exports.printOneToHundred());
+exports.insertComma = insertComma;
+console.log(exports.insertComma());

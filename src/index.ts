@@ -1,14 +1,14 @@
-export const outputOneToHundred = ():Array< string > => {
+export const outputOneToHundredFizzBuzzRules = ():Array< string > => {
 
-  const array = [];
+  const array = []
   for(let i = 1; i <= 100; i++){
-      array.push(convertFizzBuzzRules(i));
+      array.push(convertNumberToFizzBuzzRules(i));
   }
   return array;
 
 }
 
-export const convertFizzBuzzRules = (number: number): string => {
+export const convertNumberToFizzBuzzRules = (number: number): string => {
 
   if(number % 15 == 0 ) return 'Fizz Buzz';
   if(number % 5 == 0 ) return 'Buzz';
@@ -17,10 +17,10 @@ export const convertFizzBuzzRules = (number: number): string => {
 
 }
 
-export const insertComma = ():string => {
-
-  return  outputOneToHundred().join(',');
+export const buildFizzBuzzString = ():string => {
+  
+  return  outputOneToHundredFizzBuzzRules().join(',');
  
 }
 
-console.log(insertComma());
+console.log(buildFizzBuzzString());
